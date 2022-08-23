@@ -53,6 +53,7 @@ button {
     color: white;
     padding: 5px 24px;
     border-radius: 8px;
+    border-color: transparent;
 }
 
 .placeholder {
@@ -135,6 +136,10 @@ header {
     width: 550px;
     min-width: 450px;
     height: auto;
+}
+
+.hero button:hover {
+    border-color: white;
 }
 
 /* Cards */
@@ -228,14 +233,57 @@ header {
     font-weight: bold;
 }
 
+/* Call to action section */
+.call-to-action-wrapper {
+    background-color: white;
+}
+
+.call-to-action {
+    margin: var(--end-of-section-margin) auto;
+    max-width: var(--max-width);
+    height: auto;
+    background-color: var(--button-background);
+    border-radius: 8px;
+    padding: 50px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.call-to-action .text {
+    flex: 1 1 auto;
+}
+
+.call-to-action button {
+    flex: 0 0 auto;
+}
+
+.call-to-action .text {
+    color: white;
+}
+
+.call-to-action button {
+    border-color: white;
+}
+
+.call-to-action button:hover {
+    border-color: var(--dark-background);
+}
+
 /* Footer */
 .footer-wrapper {
     background-color: var(--dark-background);
 }
 
+footer {
+    max-width: var(--max-width);
+    margin: 32px auto;
+}
+
 footer p {
     color: var(--hero-secondary-text);
-    margin: 32px 0;
     text-align: center;
 }
 
