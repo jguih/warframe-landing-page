@@ -227,3 +227,18 @@ header {
     font-size: 20px;
     font-weight: bold;
 }
+
+/* Footer */
+.footer-wrapper {
+    background-color: var(--dark-background);
+}
+
+footer p {
+    color: var(--hero-secondary-text);
+    margin: 32px 0;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+}
