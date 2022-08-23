@@ -1,2 +1,7 @@
-# landing-page
-My Landing Page project for The Oding Project!
+# Warframe
+<p align=center>
+  A Website to promote Warframe!
+  
+  ![Screenshot](./images/ReadmeMain.png)
+  
+</p>
