@@ -4,6 +4,9 @@
     --hero-main-text: #F9FAF8;
     --button-background: #3882F6;
     --dark-background: #1F2937;
+    --end-of-section-margin: 120px;
+    --quote-background: #E5E7EB;
+    --quote-text: #1F2937;
 }
 
 body {
@@ -41,8 +44,8 @@ a:hover {
 }
 
 p {
-    font-size: 18px;
-    color: var(--hero-secondary-text);
+    margin: 0;
+    padding: 0;
 }
 
 button {
@@ -70,7 +73,7 @@ header {
     gap: 16px;
     margin: 0 auto;
     max-width: var(--max-width);
-    padding: 16px 16px 120px 16px;
+    padding: 16px;
 }
 
 .links {
@@ -105,8 +108,8 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 32px;
-    padding: 16px 16px 130px 16px;
-    margin: 0 auto;
+    padding: 16px;
+    margin: var(--end-of-section-margin) auto;
     max-width: var(--max-width);
 }
 
@@ -135,13 +138,21 @@ header {
 }
 
 /* Cards */
-.cards-wrapper {
+.cards-content-wrapper {
     background-color: white;
 }
 
 .cards-content {
     margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: var(--end-of-section-margin);
     max-width: var(--max-width);
+}
+
+.cards-content .title {
+    color: var(--dark-background);
+    text-align: center;
+    margin-bottom: 32px;
 }
 
 .cards-container {
@@ -151,12 +162,6 @@ header {
     flex-wrap: wrap;
     gap: 32px;
     margin: 0 auto;
-}
-
-.cards-content .title {
-    color: var(--dark-background);
-    text-align: center;
-    padding: 36px;
 }
 
 .card {
@@ -189,4 +194,36 @@ header {
 .card-title {
     color: var(--dark-background);
     margin-top: 8px;
+}
+
+/* Quote section */
+.quote-section-wrapper {
+    background-color: var(--quote-background);
+}
+
+.quote-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--end-of-section-margin) auto;
+    max-width: var(--max-width);
+}
+
+.quote-section .quote,
+.quote-section .author {
+    color: var(--quote-text);
+}
+
+.quote-section .quote {
+    width: 100%;
+    text-align: start;
+    font-size: 36px;
+    font-style: italic;
+}
+
+.quote-section .author {
+    width: 100%;
+    text-align: end;
+    font-size: 20px;
+    font-weight: bold;
 }
