@@ -32,6 +32,14 @@ a {
     text-decoration: none;
 }
 
+a:visited, a:active {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 p {
     font-size: 18px;
     color: var(--hero-secondary-text);
@@ -51,8 +59,7 @@ button {
     border-radius: 10px;
 }
 
-/* Header & nav-bar */
-/* Sets the background for the header */
+/* Header */
 .header-wrapper {
     background-color: var(--dark-background);
 }
@@ -98,7 +105,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     gap: 32px;
-    padding: 16px;
+    padding: 16px 16px 130px 16px;
     margin: 0 auto;
     max-width: var(--max-width);
 }
@@ -164,6 +171,10 @@ header {
     flex: 0 0 auto;
     width: 200px;
     height: auto;
+}
+
+.card img:hover {
+    transform: scale(1.05);
 }
 
 .card p {
