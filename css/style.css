@@ -1,6 +1,7 @@
 :root {
-    --content-width: 70%;
-    --secondary-text: #E5E7EB;
+    --max-width: 1200px;
+    --hero-secondary-text: #E5E7EB;
+    --hero-main-text: #F9FAF8;
     --button-background: #3882F6;
     --dark-background: #1F2937;
 }
@@ -10,7 +11,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 ul {
@@ -34,7 +34,7 @@ a {
 
 p {
     font-size: 18px;
-    color: var(--secondary-text);
+    color: var(--hero-secondary-text);
 }
 
 button {
@@ -44,61 +44,138 @@ button {
     border-radius: 8px;
 }
 
-/* Header & nav-bar */
-header {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    background-color: var(--dark-background);
-    color: white;
-    padding: 12px 0 120px 0;
+.placeholder {
+    background-color: var(--button-background);
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
 }
 
-.nav-bar {
-    width: 80%;
-    max-width: 1200px;
-    align-self: center;
+/* Header & nav-bar */
+/* Sets the background for the header */
+.header-wrapper {
+    background-color: var(--dark-background);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 16px 16px 120px 16px;
+}
+
+.links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-bar .links {
-    display: flex;
     gap: 16px;
     font-size: 18px;
-    color: var(--secondary-text);
+    color: var(--hero-secondary-text);
 }
 
-.nav-bar .links,
-.nav-bar .header-logo {
-    flex: 0 0 auto;
-}
-
-.nav-bar .header-logo {
-    font-size: 20px;
+.header-logo {
+    font-size: 24px;
+    color: var(--hero-main-text);
+    font-weight: bold;
     margin-right: 16px;
 }
 
-header .content {
-    width: 80%;
-    max-width: 1200px;
-    align-self: center;
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+.links,
+.header-logo {
+    flex: 0 0 auto;
 }
 
-.content .info {
+
+/* Hero */
+.hero-wrapper {
+    background-color: var(--dark-background);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 16px;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.hero .info {
     flex: 1 1 0;
     min-width: 450px;
     text-align: justify;
 }
 
-.content img {
+.hero .info .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--hero-main-text);
+}
+
+.hero .info p {
+    font-size: 18px;
+    color: var(--hero-secondary-text);
+}
+
+.hero img {
     flex: 0 1 auto;
     width: 550px;
     min-width: 450px;
     height: auto;
 }
 
+/* Cards */
+.cards-wrapper {
+    background-color: white;
+}
+
+.cards-content {
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 0 auto;
+}
+
+.cards-content .title {
+    color: var(--dark-background);
+    text-align: center;
+    padding: 36px;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 200px;
+    height: auto;
+}
+
+.card img {
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+}
+
+.card p {
+    margin-top: 6px;
+    margin-bottom: 0;
+    color: var(--dark-background);
+    width: 100%;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.card-title {
+    color: var(--dark-background);
+    margin-top: 8px;
+}
