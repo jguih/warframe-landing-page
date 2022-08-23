@@ -75,6 +75,9 @@ header {
     margin: 0 auto;
     margin-top: 16px;
     max-width: var(--max-width);
+    padding: 0 16px;
+    /* This makes the section not larger than var(--max-width), even with padding*/
+    box-sizing: border-box;
 }
 
 .links {
@@ -111,6 +114,9 @@ header {
     gap: 32px;
     margin: var(--end-of-section-margin) auto;
     max-width: var(--max-width);
+    /* This makes the section not larger than var(--max-width), even with padding*/
+    box-sizing: border-box;
+    padding: 0 16px;
 }
 
 .hero .info {
@@ -127,7 +133,7 @@ header {
 
 .hero .info p {
     font-size: 18px;
-    margin: 8px 0;
+    margin: 16px 0;
     color: var(--hero-secondary-text);
 }
 
@@ -152,6 +158,9 @@ header {
     margin-top: 32px;
     margin-bottom: var(--end-of-section-margin);
     max-width: var(--max-width);
+    padding: 0 16px;
+    /* This makes the section not larger than var(--max-width), even with padding*/
+    box-sizing: border-box;
 }
 
 .cards-content .title {
@@ -212,6 +221,9 @@ header {
     align-items: center;
     margin: var(--end-of-section-margin) auto;
     max-width: var(--max-width);
+    /* This makes the section not larger than var(--max-width), even with padding*/
+    box-sizing: border-box;
+    padding: 0 16px;
 }
 
 .quote-section .quote,
@@ -245,6 +257,8 @@ header {
     background-color: var(--button-background);
     border-radius: 8px;
     padding: 50px 200px;
+    /* This makes the section not larger than var(--max-width), even with padding*/
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
